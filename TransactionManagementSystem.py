@@ -42,9 +42,9 @@ class Account:
         if self.transactions:
             for t in self.transactions:
                 print(t)
-        else:
-            print("No Transaction Found")
-            print("-----------------------------------")
+            else:
+                print("No Transaction Found")
+                print("-----------------------------------")
 
     # Display details
     def display(self):
@@ -110,8 +110,8 @@ class TransactionManagementSystem:
 
     # Transaction History
     def transaction_history(self):
-        acc = int(input("Enter Account number: "))
-        acc_no = self.find_account(acc)
+        acc_no = int(input("Enter Account number: "))
+        acc = self.find_account(acc_no)
 
         if acc:
             acc.show_transactions()
@@ -129,7 +129,7 @@ class TransactionManagementSystem:
             print("Account Not Found")
 
     # Display All Account
-    def display_All(self):
+    def display_all(self):
         print("\nAcc_no\tName\tBalance")
         print("---------------------------")
         for acc in self.accounts:
@@ -150,7 +150,7 @@ while True:
     print("8. Exit")
 
     choice = int(input("Enter Your Choice: "))
-
+# Showing up choice after user input
     if choice == 1:
         system.create_account()
     elif choice == 2:
@@ -164,7 +164,7 @@ while True:
     elif choice == 6:
         system.check_balance()
     elif choice == 7:
-        system.display.All()
+        system.display.all()
     elif choice == 8:
         print("System Closed!")
     else:
